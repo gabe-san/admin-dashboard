@@ -11,7 +11,7 @@ html,body {
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr 2fr;
-
+    grid-template-rows: 1fr 4fr;
 }
 /* Sidebar */
 .sidebar {
@@ -242,12 +242,13 @@ input[type=text]:focus {
     grid-column: 2/span 3;
     grid-row: 2/3;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 30px 240px 240px 240px ;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr ;
     gap: 10px;
     padding: 10px;
     margin-left: 20px;
     margin-top: 10px;
+    height: 77vh;
 }
 .projectannounce {
     grid-column: 1 / span 2;
@@ -293,7 +294,6 @@ div[class^="card"] {
     transition: all 0.4s ease-out;
     position: relative;
     box-shadow: inset 5px 0.01px rgb(247, 146, 38);
-    overflow: hidden;
 }
 div[class^="card"]:hover {
     background-color: rgb(59, 61, 78);
@@ -391,7 +391,6 @@ div[class^="card"]:hover {
     justify-content: center;
     background: rgb(50, 52, 66);
     font-size: 14px;
-    
 }
 .announce-link {
     text-decoration: none;
@@ -428,10 +427,19 @@ div[class^="card"]:hover {
     flex-direction: column;
     border: 2px solid black;
     border-radius: 15px;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 15px;
+    align-items: center;
+    padding: 10px;
     background: rgb(50, 52, 66);
     font-size: 14px;
-    height: 20vh;
+}
+
+.placeholderpic {
+    width: 30px;
+    height: 30px;
+}
+
+.placeholderflex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
